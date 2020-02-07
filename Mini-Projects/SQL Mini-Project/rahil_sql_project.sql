@@ -3,8 +3,7 @@ Springboard' online SQL platform, which you can log into through the
 following link:
 
 https://sql.springboard.com/
-Username: student
-Password: learn_sql@springboard
+
 
 The data you need is in the "country_club" database. This database
 contains 3 tables:
@@ -142,9 +141,10 @@ CASE WHEN m.memid =0
 FROM Bookings b
 INNER JOIN Facilities f
       ON b.facid = f.facid
-    WHERE b.starttime >= '2012-09-14' AND b.starttime < '2012-09-15'
 INNER JOIN Members m 
-      ON m.memid = b.memid) i
+      ON m.memid = b.memid
+WHERE b.starttime >= '2012-09-14' AND b.starttime < '2012-09-15'
+) i
 WHERE cost > 30
 ORDER BY cost DESC
 
